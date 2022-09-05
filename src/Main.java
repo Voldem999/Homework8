@@ -33,7 +33,32 @@ public class Main {
 
     // Задача 3
 
+    public static int calculateDeliveryTime (int deliveryDistance) {
+        if (){
+    }
 
+
+//    int deliveryDistance = 25;
+//        if(deliveryDistance <=20)
+//
+//    {
+//        System.out.println("С учетом Вашего расстояния потребуется 1 день на доставку");
+//    }
+//        else if(deliveryDistance >20&&deliveryDistance <=60)
+//
+//    {
+//        System.out.println("С учетом Вашего расстояния потребуется 2 дня на доставку");
+//    }
+//        else if(deliveryDistance >60&&deliveryDistance <=100)
+//
+//    {
+//        System.out.println("С учетом Вашего расстояния потребуется 3 дня на доставку");
+//    }
+//        else
+//
+//    {
+//        System.out.println("Доставки нет");
+    }
 
 
 }
