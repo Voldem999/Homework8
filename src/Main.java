@@ -1,13 +1,26 @@
 public class Main {
-//    public static void checkYear(int year) {
-//        if ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0)))
-//            System.out.println(year + " год високосный");
-//        else System.out.println(year + " год не високосный");
-//    }
-//    // Задача 1
-//
+
+    public static void main(String[] args) {
+        checkYear(2022);
+        int clientOS = 0;
+        int clientDeviceYear = 2018;
+        printRecommendationVersionOs(clientOS, clientDeviceYear);
+        int deliveryDistance = 65;
+        int days = calculateDeliveryTime(deliveryDistance);
+        printDeliveryDays(days);
+    }
+
+
+    // Задача 1
+    public static void checkYear(int year) {
+        if ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0)))
+            System.out.println(year + " год високосный");
+        else System.out.println(year + " год не високосный");
+    }
+
 //    public static void main(String[] args) {
-//        checkYear(2022);}
+//        checkYear(2022);
+//    }
 
 
     // Задача 2
@@ -24,41 +37,37 @@ public class Main {
         else System.out.println("Ваша версия OS не поддерживается");
     }
 
-    public static void main(String[] args) {
-
-        int clientOS = 0;
-        int clientDeviceYear = 2018;
-        printRecommendationVersionOs(clientOS, clientDeviceYear);
-    }
+//    public static void main(String[] args) {
+//
+//        int clientOS = 0;
+//        int clientDeviceYear = 2018;
+//        printRecommendationVersionOs(clientOS, clientDeviceYear);
+//    }
 
     // Задача 3
 
-    public static int calculateDeliveryTime (int deliveryDistance) {
-        if (){
+    public static int calculateDeliveryTime(int deliveryDistance) {
+        if (deliveryDistance <= 20) {
+            return 1;
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+            return 2;
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            return 3;
+        } else {
+            throw new IllegalArgumentException("Доставки нет");
+        }
     }
 
-
-//    int deliveryDistance = 25;
-//        if(deliveryDistance <=20)
-//
-//    {
-//        System.out.println("С учетом Вашего расстояния потребуется 1 день на доставку");
-//    }
-//        else if(deliveryDistance >20&&deliveryDistance <=60)
-//
-//    {
-//        System.out.println("С учетом Вашего расстояния потребуется 2 дня на доставку");
-//    }
-//        else if(deliveryDistance >60&&deliveryDistance <=100)
-//
-//    {
-//        System.out.println("С учетом Вашего расстояния потребуется 3 дня на доставку");
-//    }
-//        else
-//
-//    {
-//        System.out.println("Доставки нет");
+    public static void printDeliveryDays(int days) {
+        System.out.printf("Потребуется дней: " + days);
     }
+
+//    public static void main(String[] args) {
+//        int deliveryDistance = 65;
+//        int days = calculateDeliveryTime(deliveryDistance);
+//        printDeliveryDays(days);
+//    }
 
 
 }
+
